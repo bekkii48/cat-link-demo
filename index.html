@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Котик по ссылке</title>
+  <meta name="description" content="Тестовая страница с кликабельной фотографией котика.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23182438'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-size='42'%3E🐱%3C/text%3E%3C/svg%3E">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100svh; padding: 40px 20px; display: grid; place-items: center; background: #101827; color: #f6f8fc; font-family: system-ui, sans-serif; }
+    main { width: min(100%, 760px); }
+    .eyebrow { color: #7dd3fc; text-transform: uppercase; letter-spacing: .16em; font-size: .875rem; font-weight: 650; }
+    h1 { font-size: clamp(2rem, 6vw, 3.5rem); line-height: 1.12; margin: 16px 0; }
+    p { font-size: 1rem; line-height: 1.6; color: #bcc9dd; }
+    .photo { display: block; margin-top: 28px; overflow: hidden; border-radius: 22px; border: 1px solid #41516b; background: #24344a; transition: transform .2s, box-shadow .2s; }
+    .photo:hover { transform: translateY(-4px); box-shadow: 0 18px 48px #0006; }
+    a:focus-visible { outline: 4px solid #7dd3fc; outline-offset: 6px; }
+    img { display: block; width: 100%; height: auto; aspect-ratio: 3403 / 2249; object-fit: cover; }
+    .caption { display: flex; gap: 16px; justify-content: space-between; flex-wrap: wrap; margin-top: 18px; font-size: .875rem; color: #bcc9dd; }
+    .caption a { color: #7dd3fc; text-underline-offset: 4px; }
+    @media (prefers-reduced-motion: reduce) { .photo { transition: none; } .photo:hover { transform: none; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">Тестовая страница</div>
+    <h1>Котик по ссылке</h1>
+    <p>Нажмите на котика — страница с фотографией откроется в новой вкладке.</p>
+    <a class="photo" href="https://commons.wikimedia.org/wiki/File:Cat_public_domain_dedication.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть фотографию котика на Wikimedia Commons в новой вкладке">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Cat_public_domain_dedication.jpg" width="3403" height="2249" alt="Рыжий полосатый кот лежит на полу и любопытно смотрит в камеру" fetchpriority="high">
+    </a>
+    <div class="caption"><span>Одна фотография. Одна ссылка.</span><span>Фото: Dlls · <a href="https://commons.wikimedia.org/wiki/File:Cat_public_domain_dedication.jpg">Public Domain</a></span></div>
+  </main>
+</body>
+</html>
